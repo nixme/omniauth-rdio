@@ -13,8 +13,10 @@ gem 'omniauth-rdio'
 
 ## Usage
 
-Read the [OmniAuth 1.0][omniauth] documentation for detailed instructions. The
-provider requires your [Rdio Application Key and Secret][rdio-register].
+Read the [OmniAuth 1.0][omniauth] documentation for detailed instructions.
+
+Pass your [Rdio Application Key and Secret][rdio-register] as arguments when
+initializing the provider.
 
 For example, if using as middleware in a Rails app, add the following to an
 initializer:
@@ -53,11 +55,11 @@ Example of the provider's [Auth Hash Schema][hash-schema]
     "secret" => "abcde..."                    # OAuth secret
   },
   "extra" => {
-    "access_token" => #<OAuth::AccessToken>,  # OAuth::AccessToken instance for further requests
-    "raw_info" => {                           # JSON from currentUser Rdio Web Service call
+    "access_token" => <OAuth::AccessToken>,   # OAuth::AccessToken instance making requests.
+    "raw_info" => {                           # Result of the currentUser Rdio Web Service call.
       "followingUrl" => "/people/nixme/people/following/",    # Includes all optional User fields
       "baseIcon" => "user/no-user-image-square.jpg",          #   except lastSongPlayed and
-      "isTrial" => false,                                     #   lastSongPlayTime
+      "isTrial" => false,                                     #   lastSongPlayTime.
       "artistCount" => 64,
       "heavyRotationKey" => "eee...",
       "networkHeavyRotationKey" => "bbb...",
