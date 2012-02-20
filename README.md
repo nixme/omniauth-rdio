@@ -55,7 +55,7 @@ Example of the provider's [Auth Hash Schema][hash-schema]
     "secret" => "abcde..."                    # OAuth secret
   },
   "extra" => {
-    "access_token" => <OAuth::AccessToken>,   # OAuth::AccessToken instance making requests.
+    "access_token" => <OAuth::AccessToken>,   # OAuth::AccessToken instance for making API requests.
     "raw_info" => {                           # Result of the currentUser Rdio Web Service call.
       "followingUrl" => "/people/nixme/people/following/",    # Includes all optional User fields
       "baseIcon" => "user/no-user-image-square.jpg",          #   except lastSongPlayed and
