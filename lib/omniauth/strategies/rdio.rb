@@ -36,7 +36,7 @@ class OmniAuth::Strategies::Rdio < OmniAuth::Strategies::OAuth
 
   # All optional User fields except lastSongPlayed and lastSongPlayTime.
   # See http://developer.rdio.com/docs/read/rest/types#User
-  EXTRA_USER_FIELDS = 'followingUrl,isTrial,artistCount,heavyRotationKey,networkHeavyRotationKey,albumCount,trackCount,username,collectionUrl,playlistsUrl,collectionKey,followersUrl,displayName,isUnlimited,isSubscriber,email,registrationDate,collectionKey,tasteProfileKey'
+  EXTRA_USER_FIELDS = 'followingUrl,isTrial,artistCount,heavyRotationKey,networkHeavyRotationKey,albumCount,trackCount,username,collectionUrl,playlistsUrl,collectionKey,followersUrl,displayName,isUnlimited,isSubscriber,email,registrationDate,collectionKey,tasteProfileKey,location'
 
   # Rdio User object from the currentUser call
   # See http://developer.rdio.com/docs/read/rest/Methods#currentUser
